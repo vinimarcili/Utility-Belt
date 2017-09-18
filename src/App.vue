@@ -2,12 +2,12 @@
   <div id="app" class="default-font">
     <header>
       <b-navbar toggle-breakpoint="sm" toggleable="sm">
-        <b-navbar-brand class="transition" href="#">EasyOrder</b-navbar-brand>
+        <b-navbar-brand class="transition" href="/">EasyOrder</b-navbar-brand>
         <b-nav-toggle target="menu" class="transition">
           <i class="fa fa-bars" aria-hidden="true"></i>
         </b-nav-toggle>
-        <b-collapse position="right" is-nav id="menu">
-          <b-nav is-nav-bar>
+        <b-collapse is-nav id="menu">
+          <b-nav is-nav-bar right>
             <b-nav-item href="/pedidos">Pedidos</b-nav-item>
             <b-nav-item href="#" disabled>Clientes</b-nav-item>
             <b-nav-item href="#" disabled>Logout</b-nav-item>
@@ -39,8 +39,11 @@ export default {
   margin: 0;
   header {
     nav {
+      padding: 0;
       .navbar-brand {
         color: black;
+        margin: 0;
+        padding: 7px 15px;
         &:hover {
           background: black;
           color: white;
@@ -48,8 +51,9 @@ export default {
       }
       #menu{
         background: #eee;
+        padding: 1px;
+        justify-content: flex-end;
         .navbar-nav {
-          float: right;
           li {
             text-align: center;
             a {
@@ -75,7 +79,8 @@ export default {
         font-size: 23px;
         position: relative;
         right: 15px;
-        top: 5px;
+        text-align: center;
+        padding: 0;
         &:hover {
           background: black;
           color: white;
@@ -84,13 +89,18 @@ export default {
           outline: none;
         }
       }
-      @media (max-width: 767px) {
+      @media (max-width: 575px) {
         .navbar-toggler{
           display: inline-block;
         }
         #menu{
+          justify-content: initial;
           .navbar-nav{
-            float: none;
+            width: 100%;
+            li {
+              display: block;
+              width: 100%;
+            }
           }
           clear: both;
         }
