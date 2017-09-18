@@ -1,5 +1,14 @@
-.default-font{
+.default-font {
   font-family: "Tahoma, Geneva, sans-serif";
   font-size: 18px;
   color: #FFF;
+}
+
+.clear {
+  clear: both;
+}
+
+.transition {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
