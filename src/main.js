@@ -5,6 +5,9 @@ import BootstrapVue from 'bootstrap-vue'
 import App from './App'
 import router from './router'
 
+/* Babel to Boostrap works on IE11 */
+import 'babel-polyfill'
+
 /* CSS bootstrap files */
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
