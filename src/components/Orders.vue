@@ -1,5 +1,5 @@
 <template>
-  <section id="request">
+  <section id="orders">
     <b-container>
       <b-row class="page-title">
           <b-col>
@@ -11,15 +11,13 @@
             </p>
           </b-col>
       </b-row>
-      <div class="request-list">
-        <b-row class="request-list-buttons">
-          <b-col>
-            <button class="new green-light-bg transition">
-              Adicionar Pedido <i class="fa fa-plus-square" aria-hidden="true"></i>
-            </button>
-          </b-col>
+      <div class="orders-list">
+        <b-row class="orders-list-buttons">
+          <button class="new green-light-bg transition">
+            Adicionar Pedido <i class="fa fa-plus-square" aria-hidden="true"></i>
+          </button>
         </b-row>
-        <b-row class="request-list-header">
+        <b-row class="orders-list-header">
           <b-col>
             ID
           </b-col>
@@ -33,7 +31,7 @@
             Ações
           </b-col>
         </b-row>
-        <b-row class="request-list-body">
+        <b-row class="orders-list-body">
           <b-col>
             1
           </b-col>
@@ -58,7 +56,7 @@
 
 <script>
 export default {
-  name: 'request',
+  name: 'Orders',
   data () {
     return {
 
@@ -68,16 +66,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#request {
+#orders {
   .page-title {
     p {
       text-align: center;
     }
   }
-  .request-list {
-    .request-list-buttons {
+  .orders-list {
+    .orders-list-buttons {
       button {
-        margin: 5px auto 15px;
+        margin: 5px 0 15px;
         height: 35px;
         cursor: pointer;
         &.new {
@@ -89,7 +87,7 @@ export default {
         }
       }
     }
-    .request-list-header {
+    .orders-list-header {
       font-weight: 600;
       background: #eee;
       border: 1px solid black;
@@ -100,7 +98,7 @@ export default {
         border-right: 1px solid black;
       }
     }
-    .request-list-body {
+    .orders-list-body {
       border: 1px solid black;
       border-right: none;
       border-top: none;
