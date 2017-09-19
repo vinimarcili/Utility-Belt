@@ -1,9 +1,26 @@
-.default-font {
-  font-family: "Tahoma, Geneva, sans-serif";
-  font-size: 18px;
-  color: #FFF;
+/* Font Class */
+.font-default {
+  @include font-default();
 }
 
+.title-default {
+  @include title-default();
+}
+/* Font Class */
+
+/* Color Class */
+.green-light-color {
+  color: $green-light;
+}
+.green-light-bg {
+  background: $green-light;
+  &:hover {
+    background: darken($green-light, 20%);
+  }
+}
+/* Color Class */
+
+/* General Class */
 .clear {
   clear: both;
 }
@@ -12,3 +29,13 @@
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+/* General Class */
+
+/* Bootstrap Classes */
+.hidden-xs-down {
+  display: initial;
+  @media (max-width: 544px) {
+    display: none;
+  }
+}
+/* Bootstrap Classes */

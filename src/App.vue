@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="default-font">
+  <div id="app" class="font-default">
     <header>
       <b-navbar toggle-breakpoint="sm" toggleable="sm">
         <b-navbar-brand class="transition" href="/">EasyOrder</b-navbar-brand>
@@ -19,11 +19,13 @@
       <router-view></router-view>
     </main>
     <footer class="footer">
-      <p class="text-muted">
-        Desenvolvido por
-        <a href="mailto:vinipetter@gmail.com">Vinícius Marcili</a> e
-        <a href="#">Giulio Denardi</a>
-      </p>
+      <b-container>
+        <p class="text-muted">
+          Desenvolvido por
+          <a href="mailto:vinipetter@gmail.com">Vinícius Marcili</a> e
+          <a href="#">Giulio Denardi</a>
+        </p>
+      </b-container>
     </footer>
   </div>
 </template>
@@ -106,6 +108,9 @@ export default {
         }
       }
     }
+  }
+  footer {
+    margin: 15px auto 0;
   }
 }
 </style>
